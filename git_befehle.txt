@@ -1,0 +1,136 @@
+﻿Überleben in der GIT BASH oder anderen Shells
+=============================================
+
+Allgemeine Hinweis zur GIT-Bash:
+	Pfadtrenner
+		Die unter Windows bekannte Pfadtrennung für Laufwerke ":" gibt es nicht in der Bash.
+		An Stelle des unter Windows bekannten "\" wird in der Bash "/" verwendet, auch als
+		Pfadtrennung für Verzeichnisse.
+		Beispiel:
+		/c/einVerzeichnis (entspricht unter Windows: c:\einVerzeichnis)
+		/c/einVerzeichnis/einUnterverzeichnis (entspricht unter Windows: c:\einVerzeichnis\einUnterverzeichnis)
+		
+		Hinweis: Falsch wäre hier: "c/einVerzeichnis"!!!
+	
+	Autovervollständigung
+		Die Tab-Taste ermögliche eine Autovervollständigung.
+		Beispiel:
+		> git stat<TAB>
+		> git status
+		
+		Ist nach dem TAB keine eindeutige Autovervollständigung möglich, kann mit 2 TAB
+		eine Vorschlagsliste angezeigt werden.
+		Beispiel:
+		> git c<TAB><TAB>
+		checkout cherry cherry-pick citool
+		clean	 clone  commit      config
+		
+		Die Autovervollständigung funktioniert auch bei Attributen.
+		Beispiel:
+		> git commit --al<TAB>
+		> git commit --all
+		
+	Unix-Befehle mit GIT
+		Eine Reihe von typischen Unix-Befehlen können auch in Verbindung mit dem
+		git-Kommando genutzt werden.
+		
+		Beispiele: "git grep", "git find", ...
+		
+
+Bewegen in der Bash:
+
+	Löschen aktuelles Zeichen: CTRL + d
+	Undo : CTRL + -
+	
+	zum Zeilenanfang: CTRL + a 
+	zum Zeilenende : CTRL + e
+	
+	ein Wort vorwärts: ALT + f
+	ein Wort rückwärts: ALT + b
+	Bildschirm löschen: CTRL + l 
+	
+	Ausschneiden bis Zeilenende: CTRL + k
+	Ausschneiden bis Wortende: ALT + d 
+	Ausschneiden bis Wortanfang: ALT + BACKSPACE
+	Ausschneiden bis letztem Whitespace: CTRL + w
+	
+	zuletzt ausgeschnittenen Text einfügen: CTRL + y
+	
+	Command-History: CTRL + r (Beginn eintippen, ggf. weiter CTRL + r)
+	And Ende der Command-History: CTRL + j
+	Command-History-Suche beenden: CTRL + g 
+	
+	
+Datei/Script ausführbar machen: chmod +x <dateiname>
+Verzeichnis anlegen: mkdir <verzeichnisname>
+Verzeichnis löschen: rm -rf <verzeichnis>
+
+
+Leere Datei erstellen:
+	touch <dateiname>
+
+In Datei schreiben:
+	echo "eine Zeile" > <dateiname>
+
+Zeile hinzufügen:
+	echo "eine Zeile" >> <dateiname>
+
+Bewegen im Verzeichnis:
+
+	Wechseln in Homeverzeichnis: cd
+	(Homeverzeichnis wird angezeigt durch ~)
+	
+	Logische Laufwerke: gemounted als /<laufwerk>
+	
+	Also, um auf C-Laufwerk ins Verzeichnis "alpha" zu wechseln: cd /c/alpha
+	
+	Ansicht im Verzeichnis: ls
+	Lang-Ansicht im Verzeichnis: ls -l
+	Ansicht mit Farben: ls -F --color=auto --show-control-chars
+	(Diese Befehle können auch mit Pfadangabe und/oder Datei ergänzt werden)
+	
+Umgang mit Dateien
+
+	Suche in Dateien nach Begriffen: grep -e <suchbegriff> <datei>
+	Anzeige von Dateien: less <datei>
+	                     (Beenden der Anzeige mit Taste "q")
+			     
+			     cat <datei>
+						 
+Editor vi:
+	Aufruf des vi-Editors:
+		> vi 
+		> vi <dateiname>  (falls die Datei existiert, wird diese geöffnet)
+		
+	vi besitzt zwei Modi, ein Steuerungsmodus sowie den Einfügenmodus.
+	Im Steuerungsmodus können Kommandos am Dokument ausgeführt werden, wie Bewegen
+	im Dokument, Suchen von Inhalten, Zeilen löschen, neue Zeile einfügen, Inhalte kopieren
+	und einfügen, also schon ziemlich viel.
+	Im Einfügen-Modus können Inhalte direkt eingegeben werden.
+	
+	Wechsel zwischen den Modi:
+	vi startet immer im Steuerungsmodus.
+	"i" Starten des Einfügemodus
+	"ESC" Starten/Wechseln in den Steuerungsmodus
+	
+	Befehle im Steuerungsmodus:
+	w Springen zum Anfang des nächsten Wortes
+	B Springen zum Anfang des letzten Wortes
+	G Springen zum Dateiende
+	x Löschen des aktuellen Zeichen (Zeichen nach dem blinkenden Cursor)
+	dd Löschen der gesamten Zeile
+	
+	:q vi beenden (ggf. mit Rückfrage)
+	:q! vi beenden ohne speichern
+	:w Datei speichern
+	:wq Datei speichern und vi beenden
+	
+	/SUCHWORT Suche nach "SUCHWORT" in Richtung Dateiende
+	?SUCHWORT Suche nach "SUCHWORT" in Richtung Dateianfang
+	
+	:set number Einschalten der Zeilennummern
+	:set nonumber Ausschalten der Zeilennummern
+	
+	:123 Springen in Zeile 123
+	
+	
