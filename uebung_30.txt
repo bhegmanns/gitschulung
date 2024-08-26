@@ -1,0 +1,51 @@
+Übung 30
+========
+
+Wir brauchen jetzt kein zip mehr ;) .
+Sie erhalten für diese Übung die URL eines zentralen Repositories: https://github.com/bhegmanns/git_schulung_u_30
+
+a)
+Clonen Sie das zentrale Repository.
+
+Es sollte sich eine Datei bundeslaender.txt in Ihrem lokalen Arbeitsverzeichnis befinden.
+Bitte warten Sie, biss alle mit dieser Aufgabe fertig sind (!)
+
+b)
+Befüllen sie nun (direkt ohne Branch) die Dati bundeslaender.txt nach folgendem Modus:
+Erstellen Sie einen Branch. Der Name ist idealerweise Ihr User-Name.
+Schreiben sie EINE Zeile in die Datei mit einem noch nicht enthaltenen Bundesland.
+Committen Sie die Änderungen und übertragen Sie die Änderung ins remote-repository.
+Erstellen Sie einen Pullrequest.
+
+Der Pullrequest wird ggf. abgelehnt, weil dieser nicht regelkonform ist.
+Der Pullrequest könnte aber auch abgelehnt werden, weil er nicht mergebar. Dann ist eine Nacharbeit nötig.
+
+
+Bundesländer:
+Baden-Württemberg	Stuttgart	35.748	10 %	11,1 Mio.	13 %
+Bayern	München	70.542	20 %	13,1 Mio.	16 %
+Berlin	Berlin	891	0 %	3,7 Mio.	4 %
+Brandenburg	Potsdam	29.654	8 %	2,5 Mio.	3 %
+Bremen	Bremen	420	0 %	0,7 Mio.	1 %
+Hamburg	Hamburg	755	0 %	1,9 Mio.	2 %
+Hessen	Wiesbaden	21.116	6 %	6,3 Mio.	8 %
+Mecklenburg-Vorpommern	Schwerin	23.295	7 %	1,6 Mio.	2 %
+Niedersachsen	Hannover	47.710	13 %	8 Mio.	10 %
+Nordrhein-Westfalen	Düsseldorf	34.112	10 %	17,9 Mio.	22 %
+Rheinland-Pfalz	Mainz	19.858	6 %	4,1 Mio.	5 %
+Saarland	Saarbrücken	2.571	1 %	1 Mio.	1 %
+Sachsen-Anhalt	Magdeburg	20.459	6 %	2,2 Mio.	3 %
+Sachsen	Dresden	18.450	5 %	4,1 Mio.	5 %
+Schleswig-Holstein	Kiel	15.804	4 %	2,9 Mio.	3 %
+Thüringen	Erfurt	16.202	5 %	2,1 Mio.	3 %
+
+Deutschland	Berlin	357.587	100 %	83,2 Mio.	
+Tipps:
+git branch
+git rebase
+git remote
+git add
+git commit 
+
+touch bundesliga.txt   (erzeugt eine neue leere Datei)
+ll (Ansicht der im aktuellen Verzeichnis befindlichen Dateien)
